@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exemplo3</title>
+</head>
+
+
+<body>
+
+      <button id="remover">-</button>
+    <span id="contador">0</span>
+    <button id="adicionar">+</button>
+
+
+    <script>
+        // 1= ecapa - selecionar os elementos
+        const contador = document.querySelector("#contador")
+        const botaoRemover = document.querySelector("#remover")
+        const botaoAdicionar = document.querySelector("#adicionar")
+
+
+        // 2ª etapa - definir as funções
+        let quantidade = 0
+
+
+        function adicionar() {
+            quantidade++
+            contador.textContent = quantidade
+        }
+
+        function remover() {
+            if (quantidade >= 1) {
+            quantidade--
+            contador.textContent = quantidade
+            }
+        }
+        // 3ª etapa - conectar as funções no evento do clique
+        botaoAdicionar.addEventListener("click", adicionar)
+        botaoRemover.addEventListener("click", remover)
+    </script>
+
+</body>
+
+
+</html>

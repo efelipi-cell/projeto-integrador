@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exemplo1</title>
+</head>
+<body>
+
+<!-- Usuario digita o nome e clica em enviar para receber um oi-->
+ <input type="text" placeholder="Digite seu nome..." id="nome">
+ <button id="botao">Enviar</button>
+ <p id="mensagem"></p>
+
+ <script>
+    const campoNome = document.querySelector("#nome")
+    const botao = document.querySelector("#botao")
+    const mensagem = document.querySelector("#mensagem")
+
+    function cumprimentar () {
+        const nome = campoNome.value
+        if (nome.lenght > 0) {
+            mensagem.textContent = `Olá, ${nome}!`
+        } else {
+            mensagem.textContent = "Por favor, digite seu nome."
+        }
+        mensagem.textContent = `Olá, ${nome}!`
+    }
+
+    botao.addEventListener("click", cumprimentar)
+ </script>
+</body>
+</html>
